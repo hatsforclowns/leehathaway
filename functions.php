@@ -14,6 +14,10 @@
 // ------------------------------------
 
 
+// Hide WP Admin bar
+show_admin_bar(false);
+
+
 // Header scripts
 function header_scripts() {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
