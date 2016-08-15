@@ -1,0 +1,148 @@
+// Header
+//
+// --------------------------------------------------
+
+
+header.site__header {
+
+  nav.navbar {
+    $nav-padding: 15px; // Padding var for expanded header
+
+    border: 0;
+    background: rgba($swatch__core--black, 0.8);
+    @include border-radius(0);
+    @include transition(background 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+
+      .navbar-img {
+        position: absolute;
+        float: left;
+        width: 100%;
+        height: 100%;
+        background: url(img/lee_header.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        @extend .visible-lg;
+      }
+
+      .navbar-brand {
+        height: auto;
+        padding-top: $nav-padding * 2;
+        padding-bottom: $nav-padding * 2;
+        margin-left: 180px;
+        color: $swatch__core--white;
+        font-family: $font-medium;
+        font-size: 1.6em;
+        text-transform: uppercase;
+        @include transition(
+        padding 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000),
+        margin 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000)
+        );
+
+        @media (max-width: $screen-lg) {
+          margin-left: 0;
+        }
+      }
+
+      .navbar-nav {
+        font-size: 12px;
+
+        li {
+
+          &.active a, &.open > a {
+            color: $swatch__core--white;
+            @include gradient-diagonal($swatch__core--violet, $swatch__core--blue);
+          }
+
+          a {
+            padding-top: $nav-padding * 2;
+            padding-bottom: $nav-padding * 2;
+            color: $swatch__core--white;
+            font-family: $font-semibold;
+            font-size: 1em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            @include transition(
+            padding 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000),
+            background 0.1s cubic-bezier(0.215, 0.610, 0.355, 1.000)
+            );
+
+            &:hover, &:focus, &:active {
+              color: $swatch__core--white;
+              background: rgba($swatch__core--white, 0.075);
+            }
+
+          }
+
+          .dropdown-menu {
+            left: 0;
+            right: auto;
+            background: $swatch__core--black;
+            font-size: 12px;
+
+            li a {
+                padding: 5px 14px;
+                font-family: $font-medium;
+                font-size: 1em;
+            }
+
+          }
+
+        }
+
+      }
+
+    .navbar-toggle span {
+      background: $swatch__core--white;
+    }
+
+
+    // Condensed navbar
+    &.navbar--condensed {
+      background: $swatch__core--black;
+
+      .navbar-brand {
+        padding-top: $nav-padding;
+        padding-bottom: $nav-padding;
+        margin-left: 114px;
+
+        @media (max-width: $screen-lg) {
+          margin-left: 0;
+        }
+
+      }
+
+      .navbar-nav {
+
+        li a {
+          padding-top: $nav-padding;
+          padding-bottom: $nav-padding;
+        }
+
+      }
+
+    }
+
+
+    // Mobile behaviour - this should imitate .navbar--condensed
+    @media (max-width: $screen-md) {
+      background: $swatch__core--black;
+
+      .navbar-brand {
+        padding-top: $nav-padding;
+        padding-bottom: $nav-padding;
+      }
+
+      .navbar-nav {
+
+        li a {
+          padding-top: $nav-padding;
+          padding-bottom: $nav-padding;
+        }
+
+      }
+
+    }
+
+  }
+
+}

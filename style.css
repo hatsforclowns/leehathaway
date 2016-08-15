@@ -1498,7 +1498,7 @@ dd {
 .dl-horizontal dd:after {
   clear: both; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -1540,7 +1540,8 @@ blockquote {
       content: '\2014 \00A0'; }
 
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+footer.site__footer nav.navbar blockquote.logo__438 {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1549,16 +1550,16 @@ blockquote.pull-right {
   .blockquote-reverse footer:before,
   .blockquote-reverse small:before,
   .blockquote-reverse .small:before,
-  blockquote.pull-right footer:before,
-  blockquote.pull-right small:before,
-  blockquote.pull-right .small:before {
+  blockquote.pull-right footer:before, footer.site__footer nav.navbar blockquote.logo__438 footer:before,
+  blockquote.pull-right small:before, footer.site__footer nav.navbar blockquote.logo__438 small:before,
+  blockquote.pull-right .small:before, footer.site__footer nav.navbar blockquote.logo__438 .small:before {
     content: ''; }
   .blockquote-reverse footer:after,
   .blockquote-reverse small:after,
   .blockquote-reverse .small:after,
-  blockquote.pull-right footer:after,
-  blockquote.pull-right small:after,
-  blockquote.pull-right .small:after {
+  blockquote.pull-right footer:after, footer.site__footer nav.navbar blockquote.logo__438 footer:after,
+  blockquote.pull-right small:after, footer.site__footer nav.navbar blockquote.logo__438 small:after,
+  blockquote.pull-right .small:after, footer.site__footer nav.navbar blockquote.logo__438 .small:after {
     content: '\00A0 \2014'; }
 
 address {
@@ -3285,7 +3286,7 @@ tbody.collapse.in {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
-  .dropdown-menu.pull-right {
+  .dropdown-menu.pull-right, footer.site__footer nav.navbar .dropdown-menu.logo__438 {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -3353,7 +3354,7 @@ tbody.collapse.in {
   top: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu, footer.site__footer nav.navbar .logo__438 > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -3370,7 +3371,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto; }
@@ -3779,7 +3780,7 @@ tbody.collapse.in {
     display: table; }
   .navbar:after {
     clear: both; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar {
       border-radius: 4px; } }
 
@@ -3790,7 +3791,7 @@ tbody.collapse.in {
 .navbar-header:after {
   clear: both; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-header {
     float: left; } }
 
@@ -3808,7 +3809,7 @@ tbody.collapse.in {
     clear: both; }
   .navbar-collapse.in {
     overflow-y: auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-collapse {
       width: auto;
       border-top: 0;
@@ -3840,7 +3841,7 @@ tbody.collapse.in {
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .container > .navbar-header,
     .container > .navbar-collapse,
     .container-fluid > .navbar-header,
@@ -3851,7 +3852,7 @@ tbody.collapse.in {
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-static-top {
       border-radius: 0; } }
 
@@ -3861,7 +3862,7 @@ tbody.collapse.in {
   right: 0;
   left: 0;
   z-index: 1030; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-fixed-top,
     .navbar-fixed-bottom {
       border-radius: 0; } }
@@ -3885,7 +3886,7 @@ tbody.collapse.in {
     text-decoration: none; }
   .navbar-brand > img {
     display: block; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar > .container .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
@@ -3910,7 +3911,7 @@ tbody.collapse.in {
     border-radius: 1px; }
   .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-toggle {
       display: none; } }
 
@@ -3920,7 +3921,7 @@ tbody.collapse.in {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .navbar-nav .open .dropdown-menu {
       position: static;
       float: none;
@@ -3936,7 +3937,7 @@ tbody.collapse.in {
         line-height: 20px; }
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-nav {
       float: left;
       margin: 0; }
@@ -3994,12 +3995,12 @@ tbody.collapse.in {
       margin-left: 0; }
     .navbar-form .has-feedback .form-control-feedback {
       top: 0; } }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .navbar-form .form-group {
       margin-bottom: 5px; }
       .navbar-form .form-group:last-child {
         margin-bottom: 0; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-form {
       width: auto;
       border: 0;
@@ -4035,13 +4036,13 @@ tbody.collapse.in {
 .navbar-text {
   margin-top: 15px;
   margin-bottom: 15px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-text {
       float: left;
       margin-left: 15px;
       margin-right: 15px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-left {
     float: left !important; }
   .navbar-right {
@@ -4083,7 +4084,7 @@ tbody.collapse.in {
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #e7e7e7;
     color: #555; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #777; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4141,7 +4142,7 @@ tbody.collapse.in {
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #090909;
     color: #fff; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
       border-color: #090909; }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
@@ -4617,7 +4618,8 @@ a.thumbnail.active {
     max-width: none; }
 
 .media-right,
-.media > .pull-right {
+.media > .pull-right, footer.site__footer nav.navbar
+.media > .logo__438 {
   padding-left: 10px; }
 
 .media-left,
@@ -5726,12 +5728,12 @@ button.close {
 .clearfix:after {
   clear: both; }
 
-.center-block {
+.center-block, footer.site__footer nav.navbar .navbar-nav {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.pull-right {
+.pull-right, footer.site__footer nav.navbar .logo__438 {
   float: right !important; }
 
 .pull-left {
@@ -5771,7 +5773,7 @@ button.close {
 .visible-md {
   display: none !important; }
 
-.visible-lg {
+.visible-lg, header.site__header nav.navbar .navbar-img {
   display: none !important; }
 
 .visible-xs-block,
@@ -5858,14 +5860,15 @@ button.close {
     display: inline-block !important; } }
 
 @media (min-width: 1200px) {
-  .visible-lg {
+  .visible-lg, header.site__header nav.navbar .navbar-img {
     display: block !important; }
-  table.visible-lg {
+  table.visible-lg, header.site__header nav.navbar table.navbar-img {
     display: table !important; }
-  tr.visible-lg {
+  tr.visible-lg, header.site__header nav.navbar tr.navbar-img {
     display: table-row !important; }
-  th.visible-lg,
-  td.visible-lg {
+  th.visible-lg, header.site__header nav.navbar th.navbar-img,
+  td.visible-lg,
+  header.site__header nav.navbar td.navbar-img {
     display: table-cell !important; } }
 
 @media (min-width: 1200px) {
@@ -5881,11 +5884,11 @@ button.close {
     display: inline-block !important; } }
 
 @media (max-width: 767px) {
-  .hidden-xs {
+  .hidden-xs, footer.site__footer nav.navbar .logo__tmc, footer.site__footer nav.navbar .logo__438 {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm {
+  .hidden-sm, footer.site__footer nav.navbar .logo__tmc, footer.site__footer nav.navbar .logo__438 {
     display: none !important; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -5967,3 +5970,159 @@ textarea,
 button,
 select {
   -webkit-font-smoothing: antialiased; }
+
+header.site__header nav.navbar {
+  border: 0;
+  background: rgba(16, 16, 16, 0.8);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: background 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: background 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: background 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  header.site__header nav.navbar .navbar-img {
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(img/lee_header.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  header.site__header nav.navbar .navbar-brand {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 180px;
+    color: #FFFFFF;
+    font-family: "Lato Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    -webkit-transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    @media (max-width: 1200px) {
+      header.site__header nav.navbar .navbar-brand {
+        margin-left: 0; } }
+  header.site__header nav.navbar .navbar-nav {
+    font-size: 12px; }
+    header.site__header nav.navbar .navbar-nav li.active a, header.site__header nav.navbar .navbar-nav li.open > a {
+      color: #FFFFFF;
+      background: #502681;
+      background: -moz-linear-gradient(-45deg, #502681 0%, #263680 100%);
+      background: -webkit-linear-gradient(-45deg, #502681 0%, #263680 100%);
+      background: linear-gradient(135deg, #502681 0%, #263680 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-left', endColorstr='$bottom-right', GradientType=1 ); }
+    header.site__header nav.navbar .navbar-nav li a {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      color: #FFFFFF;
+      font-family: "Lato Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1em;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      -webkit-transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -o-transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: padding 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.1s cubic-bezier(0.215, 0.61, 0.355, 1); }
+      header.site__header nav.navbar .navbar-nav li a:hover, header.site__header nav.navbar .navbar-nav li a:focus, header.site__header nav.navbar .navbar-nav li a:active {
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.075); }
+    header.site__header nav.navbar .navbar-nav li .dropdown-menu {
+      left: 0;
+      right: auto;
+      background: #101010;
+      font-size: 12px; }
+      header.site__header nav.navbar .navbar-nav li .dropdown-menu li a {
+        padding: 5px 14px;
+        font-family: "Lato Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1em; }
+  header.site__header nav.navbar .navbar-toggle span {
+    background: #FFFFFF; }
+  header.site__header nav.navbar.navbar--condensed {
+    background: #101010; }
+    header.site__header nav.navbar.navbar--condensed .navbar-brand {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-left: 114px; }
+      @media (max-width: 1200px) {
+        header.site__header nav.navbar.navbar--condensed .navbar-brand {
+          margin-left: 0; } }
+    header.site__header nav.navbar.navbar--condensed .navbar-nav li a {
+      padding-top: 15px;
+      padding-bottom: 15px; }
+  @media (max-width: 992px) {
+    header.site__header nav.navbar {
+      background: #101010; }
+      header.site__header nav.navbar .navbar-brand {
+        padding-top: 15px;
+        padding-bottom: 15px; }
+      header.site__header nav.navbar .navbar-nav li a {
+        padding-top: 15px;
+        padding-bottom: 15px; } }
+
+footer.site__footer {
+  background: #212121; }
+  footer.site__footer nav.navbar {
+    margin-bottom: 0; }
+    footer.site__footer nav.navbar .container {
+      position: relative; }
+    footer.site__footer nav.navbar .logo__tmc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -42px;
+      width: 84px;
+      height: 84px;
+      background-image: url(img/tmc.svg);
+      background-repeat: no-repeat;
+      background-size: 100%; }
+      .no-svg footer.site__footer nav.navbar .logo__tmc {
+        background-image: url(img/tmc.png); }
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          .no-svg footer.site__footer nav.navbar .logo__tmc {
+            background-image: url(img/tmc@2x.png); } }
+    footer.site__footer nav.navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      font-size: 12px; }
+      footer.site__footer nav.navbar .navbar-nav a {
+        color: #5d5d5d;
+        font-family: "Lato Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        -webkit-transition: background, 0.1s;
+        -o-transition: background, 0.1s;
+        transition: background, 0.1s; }
+        footer.site__footer nav.navbar .navbar-nav a:hover, footer.site__footer nav.navbar .navbar-nav a:focus, footer.site__footer nav.navbar .navbar-nav a:active {
+          color: #FFFFFF;
+          background: #2a2a2a; }
+        footer.site__footer nav.navbar .navbar-nav a span.caret {
+          display: none; }
+      footer.site__footer nav.navbar .navbar-nav.active a, footer.site__footer nav.navbar .navbar-nav.open > a {
+        color: #FFFFFF;
+        background: #502681; }
+    footer.site__footer nav.navbar .logo__438 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 17px 0;
+      width: 51px;
+      height: 22px;
+      color: white;
+      background-image: url(img/438.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background: #5d5d5d;
+      mask-image: url(img/438.svg);
+      -webkit-mask-image: url(img/438.svg);
+      -webkit-transition: background 0.1s ease-out;
+      -o-transition: background 0.1s ease-out;
+      transition: background 0.1s ease-out; }
+      .no-svg footer.site__footer nav.navbar .logo__438 {
+        background-image: url(img/438.png); }
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          .no-svg footer.site__footer nav.navbar .logo__438 {
+            background-image: url(img/438@2x.png); } }
+      .svg footer.site__footer nav.navbar .logo__438:hover {
+        background: #FF3333; }

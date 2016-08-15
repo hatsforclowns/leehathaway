@@ -14,14 +14,6 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -29,34 +21,42 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
-		<header>
-			<nav class="navbar navbar-default">
-			  <div class="container">
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php $blog_title = get_bloginfo(); ?>
-			    </div>
+			<header class="site__header">
+			<?php if ( is_page_template('templates/page-home.php') ) { ?>
+				<nav id="navbar-header" class="navbar navbar-fixed-top">
+			<? } elseif ( is_page_template('templates/page-title_block.php') ) { ?>
+				<nav id="navbar-header" class="navbar navbar-fixed-top">
+			<?php } else { ?>
+				<nav id="navbar-header" class="navbar navbar-fixed-top navbar--condensed">
+					<? } ?>
+				  <div class="container">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+							<a class="navbar-img" href="<?php echo home_url(); ?>"></a>
+				      <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+				    </div>
 
-			    <div class="collapse navbar-collapse" id="nav-primary">
+				    <div class="collapse navbar-collapse" id="nav-primary">
 
-						<?php
-						 wp_nav_menu( array(
-							 'menu'              => 'nav-header',
-							 'theme_location'    => 'nav-header',
-							 'depth'             => 2,
-							 'menu_class'        => 'nav navbar-nav navbar-right',
-							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							 'walker'            => new wp_bootstrap_navwalker())
-						 );
-					 ?>
+							<?php
+							 wp_nav_menu( array(
+								 'menu'              => 'nav-header',
+								 'menu_id'           => 'nav-header',
+								 'theme_location'    => 'nav-header',
+								 'depth'             => 2,
+								 'container'				 => 'ul',
+								 'menu_class'        => 'nav navbar-nav navbar-right',
+								 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+								 'walker'            => new wp_bootstrap_navwalker())
+							 );
+						 ?>
 
-			    </div>
-			  </div>
-			</nav>
-		</header>
+				    </div>
+				  </div>
+				</nav>
+			</header>

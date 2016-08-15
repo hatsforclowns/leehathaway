@@ -1,12 +1,27 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="site__footer">
+				<!-- footer -->
+				<nav class="navbar">
+				  <div class="container text-center">
+						<a class="logo__tmc" href="#"></a>
 
-				<div class="text-center">
-					&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>&nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="http://www.438marketing.com">Site by 438 Marketing</a>
-				</div>
+							<?php
+							 wp_nav_menu( array(
+								 'menu'              => 'nav-footer',
+								 'menu_id'           => 'nav-footer',
+								 'theme_location'    => 'nav-footer',
+								 'depth'             => 1,
+								 'container'				 => 'ul',
+								 'menu_class'        => 'nav navbar-nav',
+								 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+								 'walker'            => new wp_bootstrap_navwalker())
+							 );
+						 ?>
 
+						 <a class="logo__438" href="http://www.438marketing.com"></a>
+				  </div>
+				</nav>
+				<!-- /footer -->
 			</footer>
-			<!-- /footer -->
 
 		</div>
 		<!-- /wrapper -->

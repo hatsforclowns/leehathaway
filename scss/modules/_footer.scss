@@ -1,0 +1,83 @@
+// Footer
+//
+// --------------------------------------------------
+
+
+footer.site__footer {
+  background: $swatch__core--grey;
+
+    nav.navbar {
+      margin-bottom: 0;
+
+      .container {
+        position: relative;
+      }
+
+      .logo__tmc {
+        $offset: 42px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: -($offset);
+        width: $offset * 2;
+        height: $offset * 2;
+        @include svg-bg('tmc',100%);
+        @extend .hidden-sm;
+        @extend .hidden-xs;
+      }
+
+      .navbar-nav {
+        display: inline-block;
+        float: none;
+        font-size: 12px;
+        @extend .center-block;
+
+          a {
+            color: lighten($swatch__core--black, 30);
+            font-family: $font-semibold;
+            font-size: 1em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            @include transition(background, 0.1s);
+
+            &:hover, &:focus, &:active {
+              color: $swatch__core--white;
+              background: lighten($swatch__core--black, 10);
+            }
+
+            span.caret {
+              display: none;
+            }
+
+          }
+
+          &.active a, &.open > a {
+            color: $swatch__core--white;
+            background: $swatch__core--violet;
+          }
+
+      }
+
+      .logo__438 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 17px 0;
+        width: 51px;
+        height: 22px;
+        color: white;
+        @extend .pull-right;
+        @include svg-bg('438',100%,lighten($swatch__core--black, 30));
+        @include transition(background 0.1s ease-out);
+        @extend .hidden-sm;
+        @extend .hidden-xs;
+
+        .svg &:hover {
+          background: $swatch__438--red;
+        }
+      }
+
+    }
+
+}

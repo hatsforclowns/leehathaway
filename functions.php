@@ -66,7 +66,8 @@ function styles() {
 // Register navigation
 function navigation() {
   register_nav_menus(array(
-    'nav-header' => __('Header Navigation', 'bootpress')
+    'nav-header' => __('Header Navigation', 'bootpress'),
+    'nav-footer' => __('Footer Navigation', 'bootpress')
   ));
 }
 
