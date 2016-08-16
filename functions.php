@@ -20,6 +20,33 @@ include 'navwalker.php';
 show_admin_bar(false);
 
 
+// Site favicon
+function favicon() {
+  $base = get_template_directory_uri();
+echo '
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="'.$base.'/'.$base.'/img/icons/apple-touch-icon-57x57.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="'.$base.'/img/icons/apple-touch-icon-114x114.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="'.$base.'/img/icons/apple-touch-icon-72x72.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="'.$base.'/img/icons/apple-touch-icon-144x144.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="'.$base.'/img/icons/apple-touch-icon-60x60.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="'.$base.'/img/icons/apple-touch-icon-120x120.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="'.$base.'/img/icons/apple-touch-icon-76x76.png?v=2" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="'.$base.'/img/icons/apple-touch-icon-152x152.png?v=2" />
+<link rel="icon" type="image/x-icon" href="'.$base.'/img/icons/favicon.ico?v=2" />
+<link rel="icon" type="image/png" href="'.$base.'/img/icons/favicon-196x196.png?v=2" sizes="196x196" />
+<link rel="icon" type="image/png" href="'.$base.'/img/icons/favicon-96x96.png?v=2" sizes="96x96" />
+<link rel="icon" type="image/png" href="'.$base.'/img/icons/favicon-32x32.png?v=2" sizes="32x32" />
+<link rel="icon" type="image/png" href="'.$base.'/img/icons/favicon-16x16.png?v=2" sizes="16x16" />
+<link rel="icon" type="image/png" href="'.$base.'/img/icons/favicon-128.png?v=2" sizes="128x128" />
+<meta name="application-name" content="'.$base.'/&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="'.$base.'/img/icons/mstile-144x144.png?v=2" />
+<meta name="msapplication-square70x70logo" content="'.$base.'/img/icons/mstile-70x70.png?v=2" />
+<meta name="msapplication-square150x150logo" content="'.$base.'/img/icons/mstile-150x150.png?v=2" />
+<meta name="msapplication-wide310x150logo" content="'.$base.'/img/icons/mstile-310x150.png?v=2" />
+<meta name="msapplication-square310x310logo" content="'.$base.'/img/iconsmstile-310x310.png?v=2" />
+';}
+
 // Header scripts
 function header_scripts() {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
@@ -88,6 +115,7 @@ function body_classes( $classes ) {
 // ------------------------------------
 
 // Add Actions
+add_action('wp_head', 'favicon'); // Add favicon(s)
 add_action('wp_enqueue_scripts', 'styles'); // Load stylesheet
 add_action('init', 'header_scripts'); // Load custom scripts
 add_action('init', 'navigation'); // Load WP navigation
