@@ -5971,6 +5971,15 @@ button,
 select {
   -webkit-font-smoothing: antialiased; }
 
+main {
+  padding: 3.8em 1.6em; }
+  @media (max-width: 992px) {
+    main {
+      padding: 2.4em 1.2em; } }
+  @media (max-width: 768px) {
+    main {
+      padding: 1.8em 0.8em; } }
+
 header.site__header nav.navbar {
   border: 0;
   background: rgba(16, 16, 16, 0.8);

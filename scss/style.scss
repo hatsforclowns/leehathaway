@@ -109,6 +109,18 @@ Version: 0.1
       -webkit-font-smoothing: antialiased;
     }
 
+    main {
+      padding: 3.8em 1.6em;
+
+      @media (max-width: $screen-md) {
+        padding: 2.4em 1.2em;
+      }
+
+      @media (max-width: $screen-sm) {
+        padding: 1.8em 0.8em;
+      }
+    }
+
 
 
 // 5. OBJECTS
