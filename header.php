@@ -18,6 +18,10 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+
+		<!-- Loader -->
+		<?php include TEMPLATEPATH . '/modules/loader.php' ?>
+
 		<!-- wrapper -->
 		<div class="wrapper">
 
