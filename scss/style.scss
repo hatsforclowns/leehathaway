@@ -140,7 +140,6 @@ Version: 0.1
     }
 
 
-
 // 5. OBJECTS
 //
 // Cosmetic-free design patterns
@@ -150,24 +149,6 @@ Version: 0.1
 
     .page {
 
-      // Main content area
-      main {
-        @extend .col-md-8;
-      }
-
-      aside {
-        @extend .col-md-3;
-        @extend .col-md-offset-1;
-      }
-
-      // Extend area where sidebar does not appear
-      &.no-sidebar {
-
-        main {
-          @extend .col-md-12;
-        }
-
-      }
     }
 
 
@@ -239,3 +220,7 @@ Version: 0.1
 
     // Home Page
     @import 'templates/_home';
+
+
+    // Event
+    @import 'templates/_event';
