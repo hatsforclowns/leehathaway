@@ -21,7 +21,7 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
 
 // Expanded navbar
 jQuery(document).ready(function(){
-  if ($('body').hasClass('page-template-home')) {
+  if ($('body').hasClass('page-template-home') || $('body').hasClass('page-template-title-block')) {
     jQuery(window).scroll(function(){
         var scroll = jQuery(window).scrollTop();
         if(scroll > 280) {

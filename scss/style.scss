@@ -206,6 +206,7 @@ Version: 0.1
       text-align: center;
     }
 
+
     .section__heading {
       display: inline-block;
       margin: 0 auto 1.8em;
@@ -216,6 +217,9 @@ Version: 0.1
       border-bottom: 3px solid $swatch__core--violet;
     }
 
+
+    // Title block
+    @import 'modules/_title-block';
 
 
 // 7. TRUMPS

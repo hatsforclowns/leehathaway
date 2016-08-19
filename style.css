@@ -117,7 +117,7 @@ Version: 0.1
   font-weight: normal;
   font-style: normal; }
 
-section.module__slider .slider__overlay {
+section.module__slider .slider__overlay, section.module__title_block .background__overlay, section.module__title_block .background__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -6233,6 +6233,37 @@ section.module__events {
   text-transform: uppercase;
   padding-bottom: 0.4em;
   border-bottom: 3px solid #502681; }
+
+section.module__title_block {
+  height: 380px;
+  background: #502681; }
+  section.module__title_block h1 {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 48px;
+    color: #FFFFFF;
+    font-family: "Lato Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.065em;
+    z-index: 999; }
+    @media (max-width: 992px) {
+      section.module__title_block h1 {
+        position: relative;
+        margin: 50px 0 0 0;
+        padding: 36px 0;
+        text-align: center; } }
+  section.module__title_block .background__overlay {
+    opacity: 0.8;
+    background: #502681;
+    z-index: 1; }
+  section.module__title_block .background__image {
+    background-image: url("https://unsplash.it/1920/600/?random");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0; }
+  @media (max-width: 992px) {
+    section.module__title_block {
+      height: auto; } }
 
 .page-template-home {
   background: #212121; }
