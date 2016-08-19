@@ -29,23 +29,34 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
-			<!-- header -->
-			<header class="header clear" role="banner">
+		<header>
+			<nav class="navbar navbar-default">
+			  <div class="container">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+						<?php $blog_title = get_bloginfo(); ?>
+			    </div>
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
+			    <div class="collapse navbar-collapse" id="nav-primary">
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						
-					</nav>
-					<!-- /nav -->
+						<?php
+						 wp_nav_menu( array(
+							 'menu'              => 'nav-header',
+							 'theme_location'    => 'nav-header',
+							 'depth'             => 2,
+							 'menu_class'        => 'nav navbar-nav navbar-right',
+							 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							 'walker'            => new wp_bootstrap_navwalker())
+						 );
+					 ?>
 
-			</header>
-			<!-- /header -->
+			    </div>
+			  </div>
+			</nav>
+		</header>

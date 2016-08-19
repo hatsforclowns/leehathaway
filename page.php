@@ -1,45 +1,47 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+	<div class="container">
+		<div class="row">
 
-			<h1><?php the_title(); ?></h1>
+				<main role="main">
+					<!-- section -->
+					<section>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+						<h1><?php the_title(); ?></h1>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				<?php the_content(); ?>
+						<!-- article -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+							<?php the_content(); ?>
 
-				<br class="clear">
+							<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-				<?php edit_post_link(); ?>
+						</article>
+						<!-- /article -->
 
-			</article>
-			<!-- /article -->
+					<?php endwhile; ?>
 
-		<?php endwhile; ?>
+					<?php else: ?>
 
-		<?php else: ?>
+						<!-- article -->
+						<article>
 
-			<!-- article -->
-			<article>
+							<h2><?php _e( 'Sorry, nothing to display.', 'bootpress' ); ?></h2>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'bootpress' ); ?></h2>
+						</article>
+						<!-- /article -->
 
-			</article>
-			<!-- /article -->
+					<?php endif; ?>
 
-		<?php endif; ?>
+					</section>
+					<!-- /section -->
+				</main>
 
-		</section>
-		<!-- /section -->
-	</main>
+				<?php get_sidebar('sidebar'); ?>
 
-<?php get_sidebar(); ?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

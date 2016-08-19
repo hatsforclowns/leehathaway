@@ -1,15 +1,9 @@
 <!-- sidebar -->
-<aside class="sidebar" role="complementary">
 
-	<?php get_template_part('searchform'); ?>
+	<?php if ( is_active_sidebar( 'sidebar' )  ) : ?>
+		<aside id="secondary" class="sidebar widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar' ); ?>
+		</aside>
+	<?php endif; ?>
 
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-	</div>
-
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
-	</div>
-
-</aside>
 <!-- /sidebar -->

@@ -6,6 +6,8 @@
 // ------------------------------------
 
 
+// Register Bootstrap Navigation Walker
+include 'navwalker.php';
 
 
 
@@ -21,13 +23,8 @@ show_admin_bar(false);
 // Header scripts
 function header_scripts() {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
-    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', array(), false);
-     wp_enqueue_script('jquery');
-
     wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), false);
      wp_enqueue_script('scripts');
-
   }
 }
 
@@ -42,8 +39,38 @@ function styles() {
 // Register navigation
 function navigation() {
   register_nav_menus(array(
-    'primary' => __('Primary Menu', 'bootpress')
+    'nav-header' => __('Header Navigation', 'bootpress')
   ));
+}
+
+// Register sidebar(s)
+function sidebars() {
+  register_sidebar(array(
+    'id' => 'sidebar',
+    'name' => __( 'Sidebar', 'bootpress' ),
+    'description' => __( 'This is the default sidebar.', 'bootpress' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ));
+}
+
+
+
+// Filters
+//
+// ------------------------------------
+
+
+function body_classes( $classes ) {
+
+	// Adds a class of no-sidebar to sites without active sidebar.
+	if ( ! is_active_sidebar( 'sidebar' )) {
+		$classes[] = 'no-sidebar';
+	}
+
+	return $classes;
 }
 
 
@@ -64,3 +91,7 @@ function navigation() {
 add_action('wp_enqueue_scripts', 'styles'); // Load stylesheet
 add_action('init', 'header_scripts'); // Load custom scripts
 add_action('init', 'navigation'); // Load WP navigation
+add_action('widgets_init', 'sidebars' ); // Load WP sidebar(s)
+
+// Add Filters
+add_filter( 'body_class', 'body_classes' );

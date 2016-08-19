@@ -1,12 +1,9 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'bootpress'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//bootpress.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<div class="text-center">
+					&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>&nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="http://www.438marketing.com">Site by 438 Marketing</a>
+				</div>
 
 			</footer>
 			<!-- /footer -->

@@ -1,14 +1,122 @@
 @charset "UTF-8";
 /*
 
-Theme Name: Bootpress
-Theme URI: https://twitter.com/hatsforclowns
+Theme Name: Lee Hathaway
+Theme URI: http://www.438marketing.com
 Author: Alex Ford
 Author URI: https://twitter.com/hatsforclowns
-Description: A boilerplate Wordpress setup running Bootstrap 3.
+Description: A bespoke Wordpress theme for magician Lee Hathaway
 Version: 0.1
 
 */
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url("fonts/lato/lato-hairline-webfont.woff2") format("woff2"), url("fonts/lato/lato-hairline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Hairline Italic';
+  src: url("fonts/lato/lato-hairlineitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-hairlineitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Thin';
+  src: url("fonts/lato/lato-thin-webfont.woff2") format("woff2"), url("fonts/lato/lato-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Thin Italic';
+  src: url("fonts/lato/lato-thinitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-thinitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url("fonts/lato/lato-light-webfont.woff2") format("woff2"), url("fonts/lato/lato-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Light Italic';
+  src: url("fonts/lato/lato-lightitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("fonts/lato/lato-regular-webfont.woff2") format("woff2"), url("fonts/lato/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Regular Italic';
+  src: url("fonts/lato/lato-regularitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-regularitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Medium';
+  src: url("fonts/lato/lato-medium-webfont.woff2") format("woff2"), url("fonts/lato/lato-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Medium Italic';
+  src: url("fonts/lato/lato-mediumitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Semibold';
+  src: url("fonts/lato/lato-semibold-webfont.woff2") format("woff2"), url("fonts/lato/lato-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Semibold Italic';
+  src: url("fonts/lato/lato-semibolditalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("fonts/lato/lato-bold-webfont.woff2") format("woff2"), url("fonts/lato/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Bold Italic';
+  src: url("fonts/lato/lato-bolditalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Heavy';
+  src: url("fonts/lato/lato-heavy-webfont.woff2") format("woff2"), url("fonts/lato/lato-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Heavy Italic';
+  src: url("fonts/lato/lato-heavyitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url("fonts/lato/lato-black-webfont.woff2") format("woff2"), url("fonts/lato/lato-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Black Italic';
+  src: url("fonts/lato/lato-blackitalic-webfont.woff2") format("woff2"), url("fonts/lato/lato-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1548,7 +1656,7 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .page aside, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .page main, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .page.no-sidebar main, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1817,13 +1925,13 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .page aside, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .page main, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .page.no-sidebar main {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
   .col-md-2 {
     width: 16.66667%; }
-  .col-md-3 {
+  .col-md-3, .page aside {
     width: 25%; }
   .col-md-4 {
     width: 33.33333%; }
@@ -1833,7 +1941,7 @@ pre {
     width: 50%; }
   .col-md-7 {
     width: 58.33333%; }
-  .col-md-8 {
+  .col-md-8, .page main {
     width: 66.66667%; }
   .col-md-9 {
     width: 75%; }
@@ -1841,7 +1949,7 @@ pre {
     width: 83.33333%; }
   .col-md-11 {
     width: 91.66667%; }
-  .col-md-12 {
+  .col-md-12, .page.no-sidebar main {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -1897,7 +2005,7 @@ pre {
     left: 100%; }
   .col-md-offset-0 {
     margin-left: 0%; }
-  .col-md-offset-1 {
+  .col-md-offset-1, .page aside {
     margin-left: 8.33333%; }
   .col-md-offset-2 {
     margin-left: 16.66667%; }
@@ -5823,3 +5931,39 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+h1,
+h2 {
+  font-family: "Lato Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4; }
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato Semibold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5; }
+
+p {
+  font-family: "Lato Light", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.56; }
+
+b, strong {
+  font-family: "Lato Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; }
+
+i, em {
+  font-family: "Lato Light Italic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; }
+
+label {
+  font-family: "Lato Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; }
+
+input {
+  font-family: "Lato Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; }
+
+body,
+input,
+textarea,
+button,
+select {
+  -webkit-font-smoothing: antialiased; }

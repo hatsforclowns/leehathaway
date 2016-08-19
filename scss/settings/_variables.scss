@@ -1,0 +1,25 @@
+// Variables
+//
+// --------------------------------------------------
+
+
+// Font stack
+// ------------------------------------
+
+
+    // Fallback stack. Derived from Bootstrap v4's native font stack.
+    $font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif !default;
+
+
+    $font-thin:               'Lato Thin', $font-fallback;
+    $font-thin--italic:       'Lato Thin Italic', $font-fallback;
+    $font-light:              'Lato Light', $font-fallback;
+    $font-light--italic:      'Lato Light Italic', $font-fallback;
+    $font-regular:            'Lato Regular', $font-fallback;
+    $font-regular--italic:    'Lato Regular Italic', $font-fallback;
+    $font-medium:             'Lato Medium', $font-fallback;
+    $font-medium--italic:     'Lato Medium Italic', $font-fallback;
+    $font-semibold:           'Lato Semibold', $font-fallback;
+    $font-semibold--italic:   'Lato Semibold Italic', $font-fallback;
+    $font-bold:               'Lato Bold', $font-fallback;
+    $font-bold--italic:       'Lato Bold Italic', $font-fallback;

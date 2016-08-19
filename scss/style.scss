@@ -1,10 +1,10 @@
 /*
 
-Theme Name: Bootpress
-Theme URI: https://twitter.com/hatsforclowns
+Theme Name: Lee Hathaway
+Theme URI: http://www.438marketing.com
 Author: Alex Ford
 Author URI: https://twitter.com/hatsforclowns
-Description: A boilerplate Wordpress setup running Bootstrap 3.
+Description: A bespoke Wordpress theme for magician Lee Hathaway
 Version: 0.1
 
 */
@@ -18,6 +18,12 @@ Version: 0.1
 // --------------------------------------------------
 
 
+    // Swatches
+    @import 'settings/_swatches';
+
+
+    // Fonts
+    @import 'fonts/_lato';
 
 
 
@@ -28,6 +34,8 @@ Version: 0.1
 // --------------------------------------------------
 
 
+    @import 'settings/_mixins';
+    @import 'settings/_variables';
 
 
 
@@ -49,6 +57,57 @@ Version: 0.1
 // --------------------------------------------------
 
 
+    // Headings
+    h1,
+    h2 {
+      font-family: $font-bold;
+      line-height: 1.4;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $font-semibold;
+      line-height: 1.5;
+    }
+
+    // Paragraphs
+    p {
+      font-family: $font-light;
+      font-size: 1.2em;
+      line-height: 1.56;
+
+    }
+
+    // Strong
+    b, strong {
+      font-family: $font-bold;
+    }
+
+    // Emphasis
+    i, em {
+      font-family: $font-light--italic;
+    }
+
+    // Form elements
+    label {
+      font-family: $font-bold;
+    }
+
+    input {
+      font-family: $font-regular;
+    }
+
+
+    // Anti-alias text
+    body,
+    input,
+    textarea,
+    button,
+    select {
+      -webkit-font-smoothing: antialiased;
+    }
 
 
 
@@ -59,7 +118,27 @@ Version: 0.1
 // --------------------------------------------------
 
 
+    .page {
 
+      // Main content area
+      main {
+        @extend .col-md-8;
+      }
+
+      aside {
+        @extend .col-md-3;
+        @extend .col-md-offset-1;
+      }
+
+      // Extend area where sidebar does not appear
+      &.no-sidebar {
+
+        main {
+          @extend .col-md-12;
+        }
+
+      }
+    }
 
 
 // 6. COMPONENTS
