@@ -1,0 +1,78 @@
+// Module - Enquire
+//
+// --------------------------------------------------
+
+
+.module__enquire {
+  position: relative;
+  padding: 1.8em 0;
+  background-image: url('https://unsplash.it/1920/600/?random');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  @media (max-width: $screen-md) {
+    padding: 2.4em 0 1.2em 0;
+  }
+
+  .module__messaging {
+    @extend .col-md-7;
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    color: $swatch__core--white;
+    z-index: 1;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      text-align: center;
+    }
+
+    .messaging__heading {
+      margin-top: 0;
+      font-family: $font-semibold;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+    }
+
+    .messaging__copy {
+      margin-bottom: 0;
+      font-family: $font-light;
+    }
+
+  }
+
+  .module__cta {
+    @extend .col-md-3;
+    @extend .col-md-offset-2;
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    z-index: 1;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      padding: 1.6em 0;
+      text-align: center;
+    }
+  }
+
+  .btn__cta {
+    $color: $swatch__core--white;
+    @extend .btn;
+    padding: 1em 1.5em;
+    border: 2px solid $color;
+    color: $color;
+    font-family: $font-semibold;
+    font-size: 1em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .enquire__overlay {
+    @extend %overlay;
+    background: $swatch__core--violet;
+    opacity: 0.9;
+  }
+
+}

@@ -58,4 +58,7 @@ Template Name: Event
 		</div>
 	</div>
 
+  <!-- Enquiries module -->
+  <?php include TEMPLATEPATH . '/modules/enquire.php' ?>
+
 <?php get_footer(); ?>

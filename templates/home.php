@@ -50,4 +50,6 @@ Template Name: Home Page
 
   <?php include TEMPLATEPATH . '/modules/events.php' ?>
 
+  <?php include TEMPLATEPATH . '/modules/enquire.php' ?>
+
 <?php get_footer(); ?>

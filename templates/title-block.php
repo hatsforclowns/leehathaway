@@ -52,4 +52,6 @@ Template Name: Title Block
 		</div>
 	</div>
 
+  <?php include TEMPLATEPATH . '/modules/enquire.php' ?>
+
 <?php get_footer(); ?>
