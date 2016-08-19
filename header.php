@@ -22,9 +22,7 @@
 		<div class="wrapper">
 
 			<header class="site__header">
-			<?php if ( is_page_template('templates/page-home.php') ) { ?>
-				<nav id="navbar-header" class="navbar navbar-fixed-top">
-			<? } elseif ( is_page_template('templates/page-title_block.php') ) { ?>
+			<?php if ( is_page_template('templates/home.php') ) { ?>
 				<nav id="navbar-header" class="navbar navbar-fixed-top">
 			<?php } else { ?>
 				<nav id="navbar-header" class="navbar navbar-fixed-top navbar--condensed">

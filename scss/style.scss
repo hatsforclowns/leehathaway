@@ -38,6 +38,15 @@ Version: 0.1
     @import 'settings/_variables';
 
 
+    %overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
 
 // 3. GENERIC
 //
@@ -56,6 +65,15 @@ Version: 0.1
 //
 // --------------------------------------------------
 
+
+    // Sections
+    section {
+      position: relative;
+      display: block;
+      overflow: auto;
+      width: 100%;
+      height: auto;
+    }
 
     // Headings
     h1,
@@ -168,9 +186,47 @@ Version: 0.1
     @import 'modules/_footer';
 
 
+    // Slider block
+    @import 'modules/_slider';
+
+
+    // Awards block
+    @import 'modules/_awards';
+
+
+    // Clients block
+    @import 'modules/_clients';
+
+
+    // Events block
+    @import 'modules/_events';
+
+
+    .section__heading__wrapper {
+      text-align: center;
+    }
+
+    .section__heading {
+      display: inline-block;
+      margin: 0 auto 1.8em;
+      font-family: $font-bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding-bottom: 0.4em;
+      border-bottom: 3px solid $swatch__core--violet;
+    }
+
+
 
 // 7. TRUMPS
 //
 // Overrides (!important etc.)
 //
 // --------------------------------------------------
+
+
+    // Page Templates
+    // ------------------------------------
+
+    // Home Page
+    @import 'templates/_home';
