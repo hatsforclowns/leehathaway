@@ -28,6 +28,8 @@
 			<header class="site__header">
 			<?php if ( is_page_template('templates/home.php') ) { ?>
 				<nav id="navbar-header" class="navbar navbar-fixed-top">
+			<?php } elseif ( is_page_template('templates/event.php') ) { ?>
+				<nav id="navbar-header" class="navbar navbar-fixed-top">
 			<?php } elseif ( is_page_template('templates/title-block.php') ) { ?>
 				<nav id="navbar-header" class="navbar navbar-fixed-top">
 			<?php } else { ?>
