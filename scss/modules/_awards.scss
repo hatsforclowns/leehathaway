@@ -3,6 +3,64 @@
 // --------------------------------------------------
 
 section.module__awards {
-  padding: 2.4em 0 3.2em;
-  background: $swatch__core--blue;
+  position: relative;
+  padding: 3.6em 0 4.8em;
+  background: $swatch__core--blue url(img/bg_curtains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @extend .text-center;
+
+  @media (max-width: $screen-sm) {
+    padding: 2.4em 0 0.8em;
+  }
+
+  .section__heading {
+    border: 0;
+    overflow: auto;
+
+    img {
+      $height: $font-size-h3 * 3;
+      margin: 0 auto;
+      height: $height;
+      width: auto;
+      @extend .img-responsive;
+
+      @media (max-width: $screen-lg) {
+        height: $height * 0.8;
+      }
+
+      @media (max-width: $screen-md) {
+        height: $height * 0.65;
+      }
+
+      @media (max-width: $screen-sm) {
+        width: 92%;
+        padding: 0 4%;
+        height: auto;
+      }
+
+    }
+
+  }
+
+  .image__wrapper {
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-6;
+    padding: 0 24px;
+
+    @media (max-width: $screen-md) {
+      padding: 0 16px;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 0 5% 32px;
+    }
+
+    img {
+      @extend .img-responsive;
+    }
+  }
+
 }

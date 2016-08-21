@@ -1,13 +1,21 @@
 <section class="module__awards">
   <div class="container">
-    <div class="section__heading__wrapper">
-      <h3 class="section__heading">The Royal Variety Performance</h3>
+    <div class="section__heading">
+      <img src="<?php bloginfo('template_directory'); ?>/img/rvp.png" />
     </div>
     <div class="row">
-      <div class="col-md-3"><img class="img-responsive" src="https://unsplash.it/800/600/?random" /></div>
-      <div class="col-md-3"><img class="img-responsive" src="https://unsplash.it/800/600/?random" /></div>
-      <div class="col-md-3"><img class="img-responsive" src="https://unsplash.it/800/600/?random" /></div>
-      <div class="col-md-3"><img class="img-responsive" src="https://unsplash.it/800/600/?random" /></div>
+      <div class="image__wrapper">
+        <img src="<?php bloginfo('template_directory'); ?>/img/laurel-2012.png" />
+      </div>
+      <div class="image__wrapper">
+        <img src="<?php bloginfo('template_directory'); ?>/img/laurel-2013.png" />
+      </div>
+      <div class="image__wrapper">
+        <img src="<?php bloginfo('template_directory'); ?>/img/laurel-2014.png" />
+      </div>
+      <div class="image__wrapper">
+        <img src="<?php bloginfo('template_directory'); ?>/img/laurel-2015.png" />
+      </div>
     </div>
   </div>
 </section>

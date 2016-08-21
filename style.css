@@ -1211,7 +1211,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive {
+.img-responsive, section.module__awards .section__heading img, section.module__awards .image__wrapper img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -1363,7 +1363,7 @@ mark,
 .text-right {
   text-align: right; }
 
-.text-center, section.module__slider .slider__messaging .container h1, section.module__slider .slider__messaging .container h3 {
+.text-center, section.module__slider .slider__messaging .container h1, section.module__slider .slider__messaging .container h3, section.module__awards {
   text-align: center; }
 
 .text-justify {
@@ -1665,13 +1665,13 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .module__enquire .module__cta, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .page-template-event aside, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, section.module__slider .slider__cta .cta--left, section.module__slider .slider__cta .cta--right, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .module__enquire .module__messaging, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .page-template-event main, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, section.module__awards .image__wrapper, .col-md-3, section.module__awards .image__wrapper, .module__enquire .module__cta, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .page-template-event aside, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, section.module__awards .image__wrapper, .col-sm-6, .col-md-6, section.module__slider .slider__cta .cta--left, section.module__slider .slider__cta .cta--right, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .module__enquire .module__messaging, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .page-template-event main, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, section.module__awards .image__wrapper, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left; }
 
 .col-xs-1 {
@@ -1689,7 +1689,7 @@ pre {
 .col-xs-5 {
   width: 41.66667%; }
 
-.col-xs-6 {
+.col-xs-6, section.module__awards .image__wrapper {
   width: 50%; }
 
 .col-xs-7 {
@@ -1828,13 +1828,13 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, section.module__awards .image__wrapper, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-1 {
     width: 8.33333%; }
   .col-sm-2 {
     width: 16.66667%; }
-  .col-sm-3 {
+  .col-sm-3, section.module__awards .image__wrapper {
     width: 25%; }
   .col-sm-4 {
     width: 33.33333%; }
@@ -1934,13 +1934,13 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .module__enquire .module__cta, .col-md-4, .page-template-event aside, .col-md-5, .col-md-6, section.module__slider .slider__cta .cta--left, section.module__slider .slider__cta .cta--right, .col-md-7, .module__enquire .module__messaging, .col-md-8, .page-template-event main, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, section.module__awards .image__wrapper, .module__enquire .module__cta, .col-md-4, .page-template-event aside, .col-md-5, .col-md-6, section.module__slider .slider__cta .cta--left, section.module__slider .slider__cta .cta--right, .col-md-7, .module__enquire .module__messaging, .col-md-8, .page-template-event main, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
   .col-md-2 {
     width: 16.66667%; }
-  .col-md-3, .module__enquire .module__cta {
+  .col-md-3, section.module__awards .image__wrapper, .module__enquire .module__cta {
     width: 25%; }
   .col-md-4, .page-template-event aside {
     width: 33.33333%; }
@@ -6402,8 +6402,41 @@ section.module__slider {
       background: #101010; }
 
 section.module__awards {
-  padding: 2.4em 0 3.2em;
-  background: #263680; }
+  position: relative;
+  padding: 3.6em 0 4.8em;
+  background: #263680 url(img/bg_curtains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media (max-width: 768px) {
+    section.module__awards {
+      padding: 2.4em 0 0.8em; } }
+  section.module__awards .section__heading {
+    border: 0;
+    overflow: auto; }
+    section.module__awards .section__heading img {
+      margin: 0 auto;
+      height: 72px;
+      width: auto; }
+      @media (max-width: 1200px) {
+        section.module__awards .section__heading img {
+          height: 57.6px; } }
+      @media (max-width: 992px) {
+        section.module__awards .section__heading img {
+          height: 46.8px; } }
+      @media (max-width: 768px) {
+        section.module__awards .section__heading img {
+          width: 92%;
+          padding: 0 4%;
+          height: auto; } }
+  section.module__awards .image__wrapper {
+    padding: 0 24px; }
+    @media (max-width: 992px) {
+      section.module__awards .image__wrapper {
+        padding: 0 16px; } }
+    @media (max-width: 768px) {
+      section.module__awards .image__wrapper {
+        padding: 0 5% 32px; } }
 
 /* liScroll styles */
 .tickercontainer {
