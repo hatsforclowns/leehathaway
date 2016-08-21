@@ -29,6 +29,22 @@
 		<?php wp_footer(); ?>
 
 		<?php if ( is_page_template('templates/home.php') ) { ?>
+			<script type="text/javascript">
+			$(window).load(function() {
+			    $('#slider').nivoSlider({
+						effect: 'fold',
+				    animSpeed: 500,
+				    pauseTime: 6000,
+				    startSlide: 0,
+				    directionNav: false,
+				    controlNav: false,
+				    controlNavThumbs: false,
+				    pauseOnHover: false,
+				    randomStart: false,
+					});
+			});
+			</script>
+
 			<script>
 			$(document).ready(function(){
 				$("#scroll-clients").endlessRiver({

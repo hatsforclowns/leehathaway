@@ -339,10 +339,11 @@ th {
     max-width: 100% !important; }
   p,
   h2,
+  section.module__slider .nivo-caption,
   h3 {
     orphans: 3;
     widows: 3; }
-  h2,
+  h2, section.module__slider .nivo-caption,
   h3 {
     page-break-after: avoid; }
   .navbar {
@@ -1262,15 +1263,15 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, section.module__slider .nivo-caption, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
   h1 small,
-  h1 .small, h2 small,
-  h2 .small, h3 small,
+  h1 .small, h2 small, section.module__slider .nivo-caption small,
+  h2 .small, section.module__slider .nivo-caption .small, h3 small,
   h3 .small, h4 small,
   h4 .small, h5 small,
   h5 .small, h6 small,
@@ -1287,15 +1288,16 @@ h1, h2, h3, h4, h5, h6,
     color: #777777; }
 
 h1, .h1,
-h2, .h2,
+h2,
+section.module__slider .nivo-caption, .h2,
 h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
   h1 small,
   h1 .small, .h1 small,
   .h1 .small,
-  h2 small,
-  h2 .small, .h2 small,
+  h2 small, section.module__slider .nivo-caption small,
+  h2 .small, section.module__slider .nivo-caption .small, .h2 small,
   .h2 .small,
   h3 small,
   h3 .small, .h3 small,
@@ -1321,7 +1323,7 @@ h6, .h6 {
 h1, .h1 {
   font-size: 36px; }
 
-h2, .h2 {
+h2, section.module__slider .nivo-caption, .h2 {
   font-size: 30px; }
 
 h3, .h3 {
@@ -1363,7 +1365,7 @@ mark,
 .text-right {
   text-align: right; }
 
-.text-center, section.module__slider .slider__messaging .container h1, section.module__slider .slider__messaging .container h3, section.module__awards {
+.text-center, section.module__awards {
   text-align: center; }
 
 .text-justify {
@@ -6009,7 +6011,8 @@ section {
   height: auto; }
 
 h1,
-h2 {
+h2,
+section.module__slider .nivo-caption {
   font-family: "Lato Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.4; }
 
@@ -6340,39 +6343,175 @@ footer.site__footer {
       .svg footer.site__footer nav.navbar .logo__438:hover {
         background: #FF3333; }
 
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* The Nivo Slider styles */
+.nivoSlider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+
+.nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: none; }
+
+.nivo-main-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important; }
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+  background: white;
+  filter: alpha(opacity=0);
+  opacity: 0; }
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  top: 0; }
+
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden; }
+
+.nivo-box img {
+  display: block; }
+
+/* Caption styles */
+.nivo-caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  z-index: 8;
+  padding: 5px 10px;
+  opacity: 0.8;
+  overflow: hidden;
+  display: none;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
+.nivo-caption p {
+  padding: 5px;
+  margin: 0; }
+
+.nivo-caption a {
+  display: inline !important; }
+
+.nivo-html-caption {
+  display: none; }
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+  position: absolute;
+  top: 45%;
+  z-index: 9;
+  cursor: pointer; }
+
+.nivo-prevNav {
+  left: 0px; }
+
+.nivo-nextNav {
+  right: 0px; }
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+  text-align: center;
+  padding: 15px 0; }
+
+.nivo-controlNav a {
+  cursor: pointer; }
+
+.nivo-controlNav a.active {
+  font-weight: bold; }
+
 section.module__slider {
-  height: 540px;
-  background: #381a5a;
-  background: url(http://media.vanityfair.com/photos/56004f763a02e0b16051ed63/master/pass/penn-teller-fool-us-magic-tricks.jpg);
-  background-position: center 25%;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  position: relative;
+  text-align: center; }
+  section.module__slider #slider {
+    font-size: 48px;
+    margin: 80px 0 43px 0;
+    max-height: 480px; }
+    @media (max-width: 992px) {
+      section.module__slider #slider {
+        margin: 50px 0 86px 0;
+        max-height: 320px; } }
   section.module__slider .slider__overlay {
     background: #101010;
-    opacity: 0.6; }
-  section.module__slider .slider__messaging {
-    position: absoute;
-    width: 100%;
-    height: 100%;
-    padding: 80px 0 40px 0; }
-    section.module__slider .slider__messaging .container {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%);
-      color: #FFFFFF; }
-      section.module__slider .slider__messaging .container h1 {
-        text-transform: uppercase; }
-      section.module__slider .slider__messaging .container h3 {
-        text-transform: uppercase; }
+    opacity: 0.6;
+    z-index: 5; }
+  section.module__slider .nivo-caption {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 1.2em;
+    margin: 0;
+    display: table;
+    background: none;
+    color: #FFFFFF;
+    opacity: 1; }
+    section.module__slider .nivo-caption .caption__heading {
+      margin: 0 0 0.5em 0;
+      font-family: "Lato Bold Italic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1em;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 0.04em; }
+      @media (max-width: 768px) {
+        section.module__slider .nivo-caption .caption__heading {
+          font-size: 0.8em; } }
+    section.module__slider .nivo-caption .caption__attr {
+      margin: 0;
+      font-family: "Lato Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.45em;
+      text-transform: uppercase;
+      letter-spacing: 0.2em; }
+      @media (max-width: 768px) {
+        section.module__slider .nivo-caption .caption__attr {
+          font-size: 0.325em; } }
   section.module__slider .slider__cta {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(16, 16, 16, 0.5); }
+    background: rgba(16, 16, 16, 0.2);
+    z-index: 999; }
     section.module__slider .slider__cta .cta {
       position: relative;
       display: block;
@@ -6392,14 +6531,18 @@ section.module__slider {
       section.module__slider .slider__cta .cta:hover, section.module__slider .slider__cta .cta:active, section.module__slider .slider__cta .cta:focus {
         text-decoration: none;
         opacity: 1; }
-    section.module__slider .slider__cta .cta--left .cta {
-      background: #502681;
-      background: -moz-linear-gradient(-45deg, #502681 0%, #263680 100%);
-      background: -webkit-linear-gradient(-45deg, #502681 0%, #263680 100%);
-      background: linear-gradient(135deg, #502681 0%, #263680 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-left', endColorstr='$bottom-right', GradientType=1 ); }
-    section.module__slider .slider__cta .cta--right .cta {
-      background: #101010; }
+    section.module__slider .slider__cta .cta--left {
+      padding: 0; }
+      section.module__slider .slider__cta .cta--left .cta {
+        background: #502681;
+        background: -moz-linear-gradient(-45deg, #502681 0%, #263680 100%);
+        background: -webkit-linear-gradient(-45deg, #502681 0%, #263680 100%);
+        background: linear-gradient(135deg, #502681 0%, #263680 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-left', endColorstr='$bottom-right', GradientType=1 ); }
+    section.module__slider .slider__cta .cta--right {
+      padding: 0; }
+      section.module__slider .slider__cta .cta--right .cta {
+        background: #101010; }
 
 section.module__awards {
   position: relative;

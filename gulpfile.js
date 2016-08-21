@@ -18,6 +18,7 @@ var paths = {
     './js/lib/conditionizr-4.3.0.min.js',
     './js/lib/modernizr-2.7.1.min.js',
     './js/lib/bootstrap.min.js',
+    './js/lib/jquery.nivo.slider.pack.js',
     './js/lib/endlessRiver.js',
     './js/custom.js'
   ],
