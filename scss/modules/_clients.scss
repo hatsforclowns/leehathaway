@@ -4,6 +4,54 @@
 
 
 section.module__clients {
-  padding: 2.4em 0 3.2em;
+  padding: 2.4em 0 0.8em;
   background: $swatch__core--white;
+
+  // Scroll component
+  div[id] {
+    $imgSize: 180px;
+    height: $imgSize + 20px;
+    overflow: hidden;
+
+    li {
+      width: $imgSize;
+      height: $imgSize;
+
+      &.sprite_clients {
+        @include svg-bg('sprite-clients', 100%);
+        background-size: 500%;
+      }
+
+      &.absolut_vodka { background-position: 0% 0%; }
+      &.american_express { background-position: 25% 0%; }
+      &.arsenal { background-position: 50% 0%; }
+      &.bbc_one { background-position: 75% 0%; }
+      &.capgemini { background-position: 100% 0%; }
+      &.carphone_warehouse { background-position: 0% 20%; }
+      &.channel_4 { background-position: 25% 20%; }
+      &.citibank { background-position: 50% 20%; }
+      &.credit_suisse { background-position: 75% 20%; }
+      &.ford { background-position: 100% 20%; }
+      &.hays_recruitment { background-position: 0% 40%; }
+      &.hbos { background-position: 25% 40%; }
+      &.hsbc { background-position: 50% 40%; }
+      &.itv { background-position: 75% 40%; }
+      &.jongleurs { background-position: 100% 40%; }
+      &.kodak { background-position: 0% 60%; }
+      &.the_law_society { background-position: 25% 60%; }
+      &.lsc { background-position: 50% 60%; }
+      &.mclaren { background-position: 75% 60%; }
+      &.nationwide { background-position: 100% 60%; }
+      &.northbrook_college_sussex { background-position: 0% 80%; }
+      &.pizza_hut { background-position: 25% 80%; }
+      &.pwc { background-position: 50% 80%; }
+      &.specsavers { background-position: 75% 80%; }
+      &.teenage_cancer_trust { background-position: 100% 80%; }
+      &.vodafone { background-position: 0% 100%; }
+      &.the_walt_disney_company { background-position: 25% 100%; }
+      &.warner_bros { background-position: 50% 100%; }
+    }
+
+  }
+
 }

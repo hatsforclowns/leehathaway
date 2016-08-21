@@ -6405,9 +6405,128 @@ section.module__awards {
   padding: 2.4em 0 3.2em;
   background: #263680; }
 
+/* liScroll styles */
+.tickercontainer {
+  /* the outer div with the black border */
+  width: 100%;
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center; }
+
+/* that serves as a mask. so you get a sort of padding both left and right */
+.tickercontainer .mask {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+ul.newsticker {
+  /* that's your list */
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+/* important: display inline gives incorrect results when you check for elem's width */
+ul.newsticker li {
+  float: left;
+  margin: 10px;
+  padding: 0; }
+
+ul.er-controls {
+  list-style: none;
+  display: inline-block;
+  padding: 0; }
+
+ul.er-controls > li {
+  display: inline-block;
+  padding: 0 10px;
+  background: #f0f0f0;
+  margin: 5px;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px; }
+
+ul.er-controls > li:hover {
+  background: #f5f5f5;
+  cursor: pointer; }
+
 section.module__clients {
-  padding: 2.4em 0 3.2em;
+  padding: 2.4em 0 0.8em;
   background: #FFFFFF; }
+  section.module__clients div[id] {
+    height: 200px;
+    overflow: hidden; }
+    section.module__clients div[id] li {
+      width: 180px;
+      height: 180px; }
+      section.module__clients div[id] li.sprite_clients {
+        background-image: url(img/sprite-clients.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: 500%; }
+        .no-svg section.module__clients div[id] li.sprite_clients {
+          background-image: url(img/sprite-clients.png); }
+          @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+            .no-svg section.module__clients div[id] li.sprite_clients {
+              background-image: url(img/sprite-clients@2x.png); } }
+      section.module__clients div[id] li.absolut_vodka {
+        background-position: 0% 0%; }
+      section.module__clients div[id] li.american_express {
+        background-position: 25% 0%; }
+      section.module__clients div[id] li.arsenal {
+        background-position: 50% 0%; }
+      section.module__clients div[id] li.bbc_one {
+        background-position: 75% 0%; }
+      section.module__clients div[id] li.capgemini {
+        background-position: 100% 0%; }
+      section.module__clients div[id] li.carphone_warehouse {
+        background-position: 0% 20%; }
+      section.module__clients div[id] li.channel_4 {
+        background-position: 25% 20%; }
+      section.module__clients div[id] li.citibank {
+        background-position: 50% 20%; }
+      section.module__clients div[id] li.credit_suisse {
+        background-position: 75% 20%; }
+      section.module__clients div[id] li.ford {
+        background-position: 100% 20%; }
+      section.module__clients div[id] li.hays_recruitment {
+        background-position: 0% 40%; }
+      section.module__clients div[id] li.hbos {
+        background-position: 25% 40%; }
+      section.module__clients div[id] li.hsbc {
+        background-position: 50% 40%; }
+      section.module__clients div[id] li.itv {
+        background-position: 75% 40%; }
+      section.module__clients div[id] li.jongleurs {
+        background-position: 100% 40%; }
+      section.module__clients div[id] li.kodak {
+        background-position: 0% 60%; }
+      section.module__clients div[id] li.the_law_society {
+        background-position: 25% 60%; }
+      section.module__clients div[id] li.lsc {
+        background-position: 50% 60%; }
+      section.module__clients div[id] li.mclaren {
+        background-position: 75% 60%; }
+      section.module__clients div[id] li.nationwide {
+        background-position: 100% 60%; }
+      section.module__clients div[id] li.northbrook_college_sussex {
+        background-position: 0% 80%; }
+      section.module__clients div[id] li.pizza_hut {
+        background-position: 25% 80%; }
+      section.module__clients div[id] li.pwc {
+        background-position: 50% 80%; }
+      section.module__clients div[id] li.specsavers {
+        background-position: 75% 80%; }
+      section.module__clients div[id] li.teenage_cancer_trust {
+        background-position: 100% 80%; }
+      section.module__clients div[id] li.vodafone {
+        background-position: 0% 100%; }
+      section.module__clients div[id] li.the_walt_disney_company {
+        background-position: 25% 100%; }
+      section.module__clients div[id] li.warner_bros {
+        background-position: 50% 100%; }
 
 section.module__events {
   padding: 2.4em 0 3.2em; }

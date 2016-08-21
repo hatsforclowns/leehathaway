@@ -28,5 +28,17 @@
 
 		<?php wp_footer(); ?>
 
+		<?php if ( is_page_template('templates/home.php') ) { ?>
+			<script>
+			$(document).ready(function(){
+				$("#scroll-clients").endlessRiver({
+					speed: 60,
+					pause: false,
+					buttons: false,
+				});
+			});
+			</script>
+		<?php } else {} ?>
+
 	</body>
 </html>
